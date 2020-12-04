@@ -1,0 +1,54 @@
+{
+    "name": "huynhlexuan1995/datafollowingcalendar",
+    "description": "Get data for each hour",
+    "keywords": [
+        "huynhlexuan1995",
+        "datafollowingcalendar"
+    ],
+    "homepage": "https://github.com/huynhlexuan1995/datafollowingcalendar",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "huynh",
+            "email": "huynhlexuan1995@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Huynhlexuan1995\\Datafollowingcalendar\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Huynhlexuan1995\\Datafollowingcalendar\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Huynhlexuan1995\\Datafollowingcalendar\\DatafollowingcalendarServiceProvider"
+            ],
+            "aliases": {
+                "Datafollowingcalendar": "Huynhlexuan1995\\Datafollowingcalendar\\DatafollowingcalendarFacade"
+            }
+        }
+    }
+}
